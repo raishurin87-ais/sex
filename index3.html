@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Муж на час | Брутальные сосалки </title>
+    <!-- Подключаем жирные шрифты для брутальности -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Raleway:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome для иконок (рост, вес, инструменты) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* ===== СБРОС СТИЛЕЙ И ОСНОВНЫЕ ЦВЕТА ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #0A0A0A;      /* Глубокий черный фон */
+            --black-soft: #151515; /* Чуть светлее для карточек */
+            --red-primary: #C41E3A; /* Яркий, сексуальный красный */
+            --red-dark: #9B1D2C;    /* Бордовый для ховеров */
+            --gray-text: #CCCCCC;   /* Серый для второстепенного текста */
+            --white: #FFFFFF;
+        }
+
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* ===== ТИПОГРАФИКА ===== */
+        h1, h2, h3 {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            color: var(--white);
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            border-left: 6px solid var(--red-primary);
+            padding-left: 20px;
+        }
+
+        .section-subtitle {
+            color: var(--gray-text);
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }
+
+        /* ===== КНОПКИ И АКЦЕНТЫ ===== */
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background-color: var(--red-primary);
+            color: var(--white);
+            text-decoration: none;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+            border: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--red-dark);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(196, 30, 58, 0.5);
+        }
+
+        /* ===== НАВИГАЦИЯ ===== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(10, 10, 10, 0.95);
+            border-bottom: 2px solid var(--red-primary);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .logo span {
+            color: var(--red-primary);
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 30px;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--red-primary);
+        }
+
+        /* ===== ГЕРОЙ СЕКЦИЯ ===== */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(135deg, rgba(10,10,10,0.95) 0%, rgba(30,10,10,0.9) 100%), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--red-primary);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin: 30px 0;
+            color: var(--gray-text);
+        }
+
+        /* ===== СЕКЦИЯ МАСТЕРОВ ===== */
+        .masters {
+            padding: 80px 50px;
+            background-color: var(--black);
+        }
+
+        .masters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .master-card {
+            background-color: var(--black-soft);
+            border: 1px solid #333;
+            transition: all 0.3s;
+            overflow: hidden;
+        }
+
+        .master-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--red-primary);
+            box-shadow: 0 20px 30px -10px rgba(196, 30, 58, 0.3);
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3px;
+            background-color: #000;
+            padding: 3px;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .master-name {
+            font-size: 2rem;
+            margin-bottom: 5px;
+            color: var(--white);
+        }
+
+        .master-stats {
+            display: flex;
+            gap: 25px;
+            margin: 15px 0;
+            color: var(--red-primary);
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.1rem;
+        }
+
+        .master-stats i {
+            margin-right: 5px;
+            color: var(--red-primary);
+        }
+
+        .master-spec {
+            color: var(--gray-text);
+            margin: 15px 0;
+            font-size: 1rem;
+            min-height: 60px;
+        }
+
+        .master-price {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--white);
+            border-top: 2px solid var(--red-primary);
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+
+        .master-price small {
+            font-size: 1rem;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 300;
+            color: var(--gray-text);
+        }
+
+        /* ===== СЕКЦИЯ УСЛУГ ===== */
+        .services {
+            padding: 80px 50px;
+            background: linear-gradient(145deg, #0F0F0F 0%, #1A0C0C 100%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-item {
+            background: rgba(0,0,0,0.5);
+            padding: 30px;
+            border-bottom: 3px solid var(--red-primary);
+        }
+
+        .service-item i {
+            font-size: 2.5rem;
+            color: var(--red-primary);
+            margin-bottom: 20px;
+        }
+
+        .service-item h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            color: var(--gray-text);
+        }
+
+        /* ===== ФУТЕР ===== */
+        footer {
+            background-color: #050505;
+            padding: 30px 50px;
+            border-top: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--gray-text);
+        }
+
+        .social i {
+            font-size: 1.5rem;
+            margin-left: 20px;
+            color: var(--gray-text);
+            transition: color 0.3s;
+        }
+
+        .social i:hover {
+            color: var(--red-primary);
+        }
+
+        /* ===== АДАПТАЦИЯ ПОД ТЕЛЕФОНЫ ===== */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            h2 { font-size: 2rem; }
+            .navbar { padding: 15px 20px; flex-direction: column; gap: 15px; }
+            .nav-links a { margin: 0 15px; }
+            .hero { height: 60vh; }
+            .masters, .services { padding: 50px 20px; }
+            footer { flex-direction: column; gap: 20px; }
+            .social i { margin: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- НАВИГАЦИЯ -->
+    <nav class="navbar">
+        <div class="logo">
+            МУЖ<span>НА</span>ЧАС
+        </div>
+        <div class="nav-links">
+            <a href="#">Главная</a>
+            <a href="#masters">работники</a>
+            <a href="#services">Услуги</a>
+            <a href="#">Контакты</a>
+        </div>
+    </nav>
+
+    <!-- ГЛАВНЫЙ ЭКРАН -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>РЕШЕНИЕ ЛЮБЫХ<br><span>АНАЛЬНЫХ</span> ПРОБЛЕМ</h1>
+            <p>минет, куннилингус, анальный секс, боди-массаж</p>
+            <a href="#masters" class="btn">Выбрать РАБОТНИКА </a>
+        </div>
+    </section>
+
+    <!-- БЛОК МАСТЕРОВ -->
+    <section id="masters" class="masters">
+        <h2>НАША КОМАНДА</h2>
+        <div class="section-subtitle">Каждый работник проходит отбор. Только профессионалы с руками из правильного места.</div>
+        
+        <div class="masters-grid">
+            <!-- Карточка мастера 1 -->
+            <div class="master-card">
+                <div class="photo-gallery">
+                    <!-- Здесь 4 фото. Ты можешь заменить названия файлов на свои. Положи фото в папку images -->
+                    <img src="images/master1_1.jpWhatsApp Image 2026-02-16 at 18.13.55.jpeg" alt="Мастер Алексей" onerror="this.src='https://via.placeholder.com/300x200/1A1A1A/C41E3A?text=Фото+1'">
+                   
+                </div>
+                <div class="card-content">
+                    <h3 class="master-name">КАЙСАР</h3>
+                    <div class="master-stats">
+                        <span><i class="fas fa-arrows-alt-v"></i> 5 см</span>
+                        <span><i class="fas fa-weight-scale"></i> 82 кг</span>
+                    </div>
+                    <div class="master-spec">
+                        <i class="fas fa-wrench"></i> 10 лет опыта.
+                    </div>
+                    <div class="master-price">
+                        900 тг <small>/ час</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка мастера 2 -->
+            <div class="master-card">
+                <div class="photo-gallery">
+                    <img src="ALIKH.jpeg" alt="Мастер Дмитрий" onerror="this.src='https://via.placeholder.com/300x200/1A1A1A/C41E3A?text=Фото+1'">
+                    
+                </div>
+                <div class="card-content">
+                    <h3 class="master-name">Алихан</h3>
+                    <div class="master-stats">
+                        <span><i class="fas fa-arrows-alt-v"></i> 0.5 см</span>
+                        <span><i class="fas fa-weight-scale"></i> 94 кг</span>
+                    </div>
+                    <div class="master-spec">
+                        <i class="fas fa-bolt"></i>целка
+                    </div>
+                    <div class="master-price">
+                        1100 тг <small>/ час</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка мастера 3 -->
+            <div class="master-card">
+                <div class="photo-gallery">
+                    <img src="NURIK.jpeg" alt="Мастер Игорь" onerror="this.src='https://via.placeholder.com/300x200/1A1A1A/C41E3A?text=Фото+1'">
+                   
+                </div>
+                <div class="card-content">
+                    <h3 class="master-name">Нуралы</h3>
+                    <div class="master-stats">
+                        <span><i class="fas fa-arrows-alt-v"></i> 2 см</span>
+                        <span><i class="fas fa-weight-scale"></i> 98 кг</span>
+                    </div>
+                    <div class="master-spec">
+                        <i class="fas fa-paint-roller"></i> бл только 1 раз почти целка.
+                    </div>
+                    <div class="master-price">
+                        1000 тг <small>/ час</small>
+                    </div>
+                </div>
+            </div>
+
+       
+        </div>
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="#" class="btn">Показать еще мастеров</a>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ УСЛУГ -->
+    <section id="services" class="services">
+        <h2>ЧЕМ МЫ ЗАНИМАЕМСЯ</h2>
+        <div class="section-subtitle">Полный спектр услуг по сексу и не только</div>
+        <div class="services-grid">
+            <div class="service-item">
+                <i class="fas fa-tools"></i>
+                <h3>минет</h3>
+                <p>сосем до горла.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-bolt"></i>
+                <h3>куни</h3>
+                <p>мастерский используем язык.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-couch"></i>
+                <h3>анальный секс</h3>
+                <p>полное ваше доминация в постеле.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-paint-brush"></i>
+                <h3>пин понг</h3>
+                <p>открываем всю вашу мужскую энергию.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer>
+        <div>© 2025 МУЖ НА ЧАС. Все права защищены.</div>
+        <div class="social">
+            <i class="fab fa-telegram"></i>
+            <i class="fab fa-whatsapp"></i>
+            <i class="fab fa-vk"></i>
+        </div>
+        <div>+7 (999) 123-45-67</div>
+    </footer>
+</body>
+</html>
